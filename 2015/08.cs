@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AdventOfCode._2015
@@ -35,7 +36,18 @@ namespace AdventOfCode._2015
 
         override internal void ResolutionTaskA()
         {
-            
+            int charCounterCode = 0;
+            int charCounterMemory = 0;
+            int charCounterParsed = 0;
+            foreach (string line in input) {
+                Console.WriteLine(line);
+                charCounterCode += line.Length;
+                Console.WriteLine(charCounterCode);
+                string parsed = Regex.Unescape(line);
+                charCounterParsed += parsed.Length - 2;
+                Console.WriteLine(parsed);
+                Console.WriteLine(charCounterParsed);
+            }
         }
 
         override internal void ResolutionTaskB()
