@@ -48,11 +48,31 @@ namespace AdventOfCode._2015
                 Console.WriteLine(parsed);
                 Console.WriteLine(charCounterParsed);
             }
+            Console.WriteLine("Difference in Memory " + (charCounterCode - charCounterParsed).ToString());
         }
 
         override internal void ResolutionTaskB()
         {
-           
+            int charCounterCode = 0;
+            int charCounterMemory = 0;
+            int charCounterParsed = 0;
+            foreach (string line in input)
+            {
+                Console.WriteLine(line);
+                charCounterCode += line.Length;
+                Console.WriteLine(charCounterCode);
+
+                // " -> \"
+                // \ -> \\
+                // \x?? -> \\x??
+
+                string parsed = line.Replace("\\", "AA");
+                parsed = parsed.Replace("\"", "BB");
+                charCounterParsed += parsed.Length+2;
+                Console.WriteLine(parsed);
+                Console.WriteLine(charCounterParsed);
+            }
+            Console.WriteLine("Difference in Memory " + (charCounterParsed-charCounterCode).ToString());
         }
     }
 }

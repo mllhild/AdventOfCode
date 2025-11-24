@@ -36,8 +36,8 @@ namespace AdventOfCode._2015
                 case "6": new _06().Solve(); break;
                 case "7": new _07().Solve(); break;
                 case "8": new _08().Solve(); break;
-                case "9": ToDo(); break;
-                case "10": ToDo(); break;
+                case "9": new _09().Solve(); break;
+                case "10": new _10().Solve(); break;
                 case "11": ToDo(); break;
                 case "12": ToDo(); break;
                 case "13": ToDo(); break;
